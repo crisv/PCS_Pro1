@@ -56,13 +56,21 @@
         // attach an event listener to the Run Script button
         // use an attribute selector to pick the right button
         $('input[value="Run Script"]').click( function(){
-          console.log('Caught a "Run Script" click event.');
+            console.log('Caught a "Run Script" click event.');
           $("#output_area").addClass( 'selected');
-          alert("The looping function should go here.");
+          loop_and_display();
         });
 
         // attach an event listener to the Clear button here
 
+        $('input[value="Clear"]').click( function(){
+            console.log('Caught a "Clear" click event.');
+          
+            $("#output_area").removeClass( 'selected' );
+             output_html = null;
+            $("#output_area").html(output_html);
+
+        });
       }); // end of $(document).ready
 
       /*
@@ -87,19 +95,25 @@
     <p>Read the code and answer the following questions by editing the definition list and puttng your answers in the &lt;dd&gt; elements.</p>
     <h2>Quiz</h2>
     <dl>
-      <dt>What is an 'event listener'?</dt>
-      <dd>(put your answer here)</dd>
-      <dt>How do you attach an event listener that responds to a 'click' event to an element using jQuery?</dt>
-      <dd>(put your answer here)</dd>
-      <dt>What is the ID of the place where the output of the loop function should go?</dt>
-      <dd>(put your answer here)</dd>
-      <dt>What is the class that changes the style of the output area?</dt>
-      <dd>(put your answer here)</dd>
-      <dt>What does the selector input[value="Run Script"] do? Enter the URLs of the places you researched with your explanation.</dt>
-      <dd>(put your answer here)</dd>
-      <dt>What is the URL of the documentation for the jQuery <kbd>.addClass</kbd> method?</dt>
-      <dd>(put your answer here)</dd>
-      <dt>What is the URL of the documentation for GitHub Pages? What does creating the <kbd>gh-pages</kbd> branch do on github.com</dt>
+      <dt>1. What is an 'event listener'?</dt>
+      <dd>   An 'event listener' is a method or function that waits on an event to occur.</dd>
+
+      <dt>2. How do you attach an event listener that responds to a 'click' event to an element using jQuery?</dt>
+      <dd>   By adding the following code: .click ()  </dd>
+
+      <dt>3. What is the ID of the place where the output of the loop function should go?</dt>
+      <dd>   The ID is "#output_area"</dd>
+
+      <dt>4. What is the class that changes the style of the output area?</dt>
+      <dd>   ".addClass( 'selected')"</dd>      
+
+      <dt>5. What does the selector input[value="Run Script"] do? Enter the URLs of the places you researched with your explanation.</dt>
+      <dd>   (put your answer here)</dd>
+
+      <dt>6. What is the URL of the documentation for the jQuery <kbd>.addClass</kbd> method?</dt>
+      <dd>   (put your answer here)</dd>
+
+      <dt>7. What is the URL of the documentation for GitHub Pages? What does creating the <kbd>gh-pages</kbd> branch do on github.com</dt>
       <dd>(put your answer here)</dd>
       <dt>What is the URL of the documentation for the <kbd>$(document).ready()</kbd> jQuery method?</dt>
       <dd>(put your answer here)</dd>
